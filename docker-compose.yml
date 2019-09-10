@@ -46,7 +46,7 @@ services:
     expose:
       - 9093
     networks:
-      - monitor-net
+      - monitoring
     labels:
       org.label-schema.group: "monitoring"
 
