@@ -43,7 +43,7 @@ services:
       - '--config.file=/etc/alertmanager/config.yml'
       - '--storage.path=/alertmanager'
     restart: unless-stopped
-    expose:
+    ports:
       - 9093:9093
     networks:
       - monitoring
@@ -101,7 +101,7 @@ services:
       - GF_SECURITY_ADMIN_PASSWORD=${ADMIN_PASSWORD:-admin}
       - GF_USERS_ALLOW_SIGN_UP=false
     restart: unless-stopped
-    expose:
+    ports:
       - 3000:3000
     networks:
       - monitoring
